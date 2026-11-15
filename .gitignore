@@ -1,0 +1,25 @@
+# Python temporary files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Personal notes
+report_notes.md
+
+# Local settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Old experimental generator
+offer_generator_75trips.py
