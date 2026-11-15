@@ -367,7 +367,16 @@ def confirm_booking(offer,bookings,offers,bookings_path="data/bookings.csv",
     return booking
 
 
+
 def search_offers(offers, destinations, bookings):
+    while True:
+        restart = search_offers_session(offers, destinations, bookings)
+
+        if not restart:
+            return
+
+
+def search_offers_session(offers, destinations, bookings):
     print("\n===== Search for bus offers =====")
 
     # Display available destinations
@@ -856,7 +865,8 @@ def search_offers(offers, destinations, bookings):
                     print("Invalid option. Please try again.")
 
         elif choice == "4":
-            print("Change destination or date selected.")
+            #return search_offers(offers, destinations, bookings)
+            return True
 
         elif choice == "5" or choice == "back":
             return
